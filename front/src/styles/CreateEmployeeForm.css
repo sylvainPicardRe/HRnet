@@ -1,0 +1,26 @@
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.address {
+  margin-top: 10px;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: #6c8e27;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #a1b858;
+}
