@@ -20,13 +20,13 @@ function DataTable({ data }) {
   const columns = [
     { header: 'First Name', accessor: 'firstName' },
     { header: 'Last Name', accessor: 'lastName' },
-    { header: 'Start Date', accessor: 'startDate', render: formatDate },
+    { header: 'Star Date', accessor: 'startDate', render: formatDate },
     { header: 'Department', accessor: 'department' },
-    { header: 'Date of Birth', accessor: 'birth', render: formatDate },
+    { header: 'Date of Birth', accessor: 'dateOfBirth', render: formatDate },
     { header: 'Street', accessor: 'street' },
     { header: 'City', accessor: 'city' },
     { header: 'State', accessor: 'state' },
-    { header: 'Zip Code', accessor: 'zipcode' },
+    { header: 'Zip Code', accessor: 'zipCode' },
   ]
 
   const processedData = useMemo(() => {

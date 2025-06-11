@@ -7,7 +7,7 @@ import Modal from '../../components/Modal'
 
 import '../../styles/CreateEmployee.css'
 
-const CreateEmployee = () => {
+function CreateEmployee({ setEmployees }) {
   const [isModalOpen, setModalOpen] = useState(false)
   return (
     <main className="container">
@@ -16,7 +16,10 @@ const CreateEmployee = () => {
         View Current Employees
       </Link>
       <h2 className="subtitle">Create Employee</h2>
-      <CreateEmployeeForm setModalOpen={setModalOpen} />
+      <CreateEmployeeForm
+        setModalOpen={setModalOpen}
+        setEmployees={setEmployees}
+      />
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </main>
   )
