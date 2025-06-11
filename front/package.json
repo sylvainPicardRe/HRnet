@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.0"
+    "react-router": "^7.6.0",
+    "react-select-us-states": "^0.1.2",
+    "us-state-codes": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

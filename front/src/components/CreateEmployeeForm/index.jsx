@@ -1,6 +1,11 @@
+import { useState } from 'react'
+import USStateSelect from 'react-select-us-states'
+
 import '../../styles/CreateEmployeeForm.css'
 
 function CreateEmployeeForm({ setModalOpen }) {
+  const [state, setState] = useState('')
+
   const saveEmployee = (e) => {
     e.preventDefault()
     setModalOpen(true)
@@ -30,7 +35,12 @@ function CreateEmployeeForm({ setModalOpen }) {
         <input id="city" type="text" />
 
         <label htmlFor="state">State</label>
-        <select name="state" id="state"></select>
+        <USStateSelect
+          id="state"
+          className="state-select"
+          onChange={(value) => setState(value)}
+          value={state}
+        />
 
         <label htmlFor="zip-code">Zip Code</label>
         <input id="zip-code" type="number" />
