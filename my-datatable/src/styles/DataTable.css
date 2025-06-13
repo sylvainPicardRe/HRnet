@@ -1,0 +1,203 @@
+.dataTables_wrapper {
+  position: relative;
+  clear: both;
+  zoom: 1;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #333;
+}
+
+.dataTables_wrapper .dataTables_length {
+  float: left;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  text-align: right;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 0.5em;
+}
+
+table {
+  width: 911px;
+}
+
+th {
+  width: 77px;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 1px solid #111;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+  box-sizing: content-box;
+}
+
+table.dataTable {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 10px 18px;
+  border-bottom: 1px solid #111;
+}
+
+table.dataTable thead th,
+table.dataTable tfoot th {
+  font-weight: bold;
+}
+
+table.dataTable th,
+table.dataTable td {
+  box-sizing: content-box;
+}
+
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+  background-color: #f9f9f9;
+}
+
+table.dataTable tbody tr {
+  background-color: #ffffff;
+}
+
+table.dataTable.row-border tbody tr:first-child th,
+table.dataTable.row-border tbody tr:first-child td,
+table.dataTable.display tbody tr:first-child th,
+table.dataTable.display tbody tr:first-child td {
+  border-top: none;
+}
+
+table.dataTable.row-border tbody th,
+table.dataTable.row-border tbody td,
+table.dataTable.display tbody th,
+table.dataTable.display tbody td {
+  border-top: 1px solid #ddd;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 8px 10px;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+  box-sizing: content-box;
+}
+
+.dataTables_wrapper .dataTables_info {
+  clear: both;
+  float: left;
+  padding-top: 0.755em;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding-top: 0.25em;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  cursor: default;
+  color: #666 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #333 !important;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #333 !important;
+  border: 1px solid #979797;
+  background-color: white;
+  background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+  background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+
+table.dataTable.display tbody tr:hover > .sorting_1,
+table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+  background-color: #333333;
+}
+table.dataTable.display tbody tr.odd > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #f1f1f1;
+}
+table.dataTable.display tbody tr.even > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #f1f1f1;
+}
+
+th.sorting {
+  position: relative;
+}
+
+.sort-icon-wrapper {
+  position: absolute;
+  right: 0;
+  top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  color: grey;
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+.arrow.disable {
+  opacity: 0;
+}
+
+.arrow.active {
+  opacity: 1;
+  color: #007bff;
+}
