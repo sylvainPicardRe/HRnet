@@ -3,7 +3,7 @@ import TableHeader from '../TableHeader'
 import SearchBar from '../SearchBar'
 import RowsPerPageSelector from '../Rows'
 import Pagination from '../Pagination'
-import '../../styles/DataTable.css'
+import '../../../../my-datatable/src/styles/DataTable.css'
 
 function DataTable({ data }) {
   const [currentPage, setCurrentPage] = useState(1)

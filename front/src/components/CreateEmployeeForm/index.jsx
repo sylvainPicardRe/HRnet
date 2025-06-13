@@ -3,7 +3,7 @@ import USStateSelect from 'react-select-us-states'
 
 import '../../styles/CreateEmployeeForm.css'
 
-function CreateEmployeeForm({ setModalOpen, setEmployees }) {
+function CreateEmployeeForm({ setModalOpen, addEmployee }) {
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -16,26 +16,18 @@ function CreateEmployeeForm({ setModalOpen, setEmployees }) {
     zipCode: '',
   })
 
-  console.log(form)
-
-  // Mise à jour des `<input>` et du `<select>`
   function handleChange(e) {
     const { name, value } = e.target
     setForm((f) => ({ ...f, [name]: value }))
   }
 
-  // Mise à jour de USStateSelect
   function handleStateChange(value) {
     setForm((f) => ({ ...f, state: value }))
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-  }
-
-  function saveEmployee() {
-    setEmployees((prev) => [...prev, form])
-
+    addEmployee(form)
     setForm({
       firstName: '',
       lastName: '',
@@ -52,6 +44,7 @@ function CreateEmployeeForm({ setModalOpen, setEmployees }) {
 
   return (
     <form onSubmit={handleSubmit} id="create-employee">
+      {/* Tous tes inputs ici */}
       <label htmlFor="firstName">First Name</label>
       <input
         type="text"
@@ -141,7 +134,7 @@ function CreateEmployeeForm({ setModalOpen, setEmployees }) {
         <option value="Legal">Legal</option>
       </select>
 
-      <button type="submit" className="submit-btn" onClick={saveEmployee}>
+      <button type="submit" className="submit-btn">
         Save
       </button>
     </form>

@@ -1,22 +1,39 @@
 import { useState, useMemo } from 'react'
 import TableHeader from '../TableHeader'
 import SearchBar from '../SearchBar'
-import RowsPerPageSelector from '../Rows'
+import RowsPerPageSelector from '../RowsPerPageSelector'
 import Pagination from '../Pagination'
 import '../../styles/DataTable.css'
 
+/**
+ * DataTable component that displays data in a table with sorting, searching, pagination,
+ * and adjustable rows per page.
+ * @param {Array} data - Array of objects representing the table data
+ */
+
 function DataTable({ data }) {
+  // Current page number for pagination
   const [currentPage, setCurrentPage] = useState(1)
+  // Number of rows to display per page
   const [rowsPerPage, setRowsPerPage] = useState(10)
+  // Search term used to filter table data
   const [searchTerm, setSearchTerm] = useState('')
+  // Currently sorted column accessor key
   const [sortColumn, setSortColumn] = useState(null)
+  // Sorting direction: 'asc' or 'desc'
   const [sortDirection, setSortDirection] = useState('asc')
 
+  /**
+   * Format a date string to French locale date format (dd/mm/yyyy)
+   * @param {string} dateString - ISO date string
+   * @returns {string} - formatted date string
+   */
   const formatDate = (dateString) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('fr-FR')
   }
 
+  // Define table columns: header label, data key accessor, and optional render function
   const columns = [
     { header: 'First Name', accessor: 'firstName' },
     { header: 'Last Name', accessor: 'lastName' },
@@ -29,8 +46,14 @@ function DataTable({ data }) {
     { header: 'Zip Code', accessor: 'zipCode' },
   ]
 
+  /**
+   * Processes the data by filtering based on the search term and sorting
+   * according to the selected column and direction.
+   * useMemo optimizes by recalculating only when dependencies change.
+   */
   const processedData = useMemo(() => {
     let tempData = [...data]
+
     if (searchTerm) {
       const lower = searchTerm.toLowerCase()
       tempData = tempData.filter((item) =>
@@ -39,6 +62,7 @@ function DataTable({ data }) {
         ),
       )
     }
+
     if (sortColumn) {
       tempData.sort((a, b) => {
         const valA = a[sortColumn]
@@ -75,7 +99,12 @@ function DataTable({ data }) {
   }, [processedData, currentPage, rowsPerPage])
 
   const totalPages = Math.ceil(processedData.length / rowsPerPage)
-
+  /**
+   * Handles sorting when a column header is clicked.
+   * If the same column is clicked again, toggles the sort direction.
+   * Otherwise, sets sorting to the new column in ascending order.
+   * @param {string} accessor - column key to sort by
+   */
   const handleSort = (accessor) => {
     if (sortColumn === accessor) {
       setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))

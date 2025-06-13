@@ -1,4 +1,14 @@
 // components/TableHeader.jsx
+import PropTypes from 'prop-types'
+/**
+ * TableHeader component renders the table's header row with column headers.
+ * Each header is clickable to allow sorting by that column.
+ *
+ * @param {Array} columns - Array of column objects { header, accessor }
+ * @param {string|null} sortColumn - The column currently sorted by (accessor key)
+ * @param {string} sortDirection - Sorting direction ('asc' or 'desc')
+ * @param {function} onSort - Callback function when a column header is clicked
+ */
 function TableHeader({ columns, sortColumn, sortDirection, onSort }) {
   return (
     <thead>
@@ -32,5 +42,16 @@ function TableHeader({ columns, sortColumn, sortDirection, onSort }) {
     </thead>
   )
 }
-
+TableHeader.propTypes = {
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      header: PropTypes.string.isRequired,
+      accessor: PropTypes.string.isRequired,
+      render: PropTypes.func,
+    }),
+  ).isRequired,
+  sortColumn: PropTypes.string,
+  sortDirection: PropTypes.oneOf(['asc', 'desc']).isRequired,
+  onSort: PropTypes.func.isRequired,
+}
 export default TableHeader

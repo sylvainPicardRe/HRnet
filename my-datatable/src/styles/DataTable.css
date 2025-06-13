@@ -109,12 +109,6 @@ table.dataTable tbody td {
   padding: 8px 10px;
 }
 
-table.dataTable,
-table.dataTable th,
-table.dataTable td {
-  box-sizing: content-box;
-}
-
 .dataTables_wrapper .dataTables_info {
   clear: both;
   float: left;

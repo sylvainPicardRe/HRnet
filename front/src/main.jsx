@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import ReactDom from 'react-dom/client'
 
-import App from './App'
+import App from './app/App'
 
 import './styles/index.css'
 

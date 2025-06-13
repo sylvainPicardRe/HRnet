@@ -1,28 +1,78 @@
-## Usage
+# my-datatable-sydyjo
+
+A React table to manage and display employees.
+
+---
+
+## Prérequis
+
+- **Node.js** version recommandée : `>=16.0.0`
+- **npm** pour gérer les dépendances
+- Un éditeur de texte comme [Visual Studio Code](https://code.visualstudio.com/) est recommandé pour un confort optimal.
+
+---
+
+## Installation
+
+Installez le package via npm ou yarn :
 
 ```bash
-$ npm install # or pnpm install or yarn install
+npm install my-datatable-sydyjo
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Ce package nécessite que votre projet utilise React 18 ou une version supérieure.
 
-## Available Scripts
+Merci d’installer manuellement ces dépendances si ce n’est pas déjà fait :
 
-In the project directory, you can run:
+```bash
+npm install react@18 react-dom@18
+```
 
-### `npm run dev`
+## Exemple d'utilisation
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+```jsx
+import React from 'react'
+import MyDataTable from 'my-datatable-sydyjo'
 
-### `npm run build`
+const employees = [
+  {
+    firstName: 'Jean',
+    lastName: 'Dupont',
+    startDate: '2022-01-15',
+    department: 'Informatique',
+    dateOfBirth: '1985-06-20',
+    street: '123 Rue Principale',
+    city: 'Saint-Denis',
+    state: 'Réunion',
+    zipcode: '97400',
+  },
+  {
+    firstName: 'Marie',
+    lastName: 'Curie',
+    startDate: '2021-09-01',
+    department: 'Recherche',
+    birth: '1978-11-07',
+    street: '456 Avenue des Sciences',
+    city: 'Le Tampon',
+    state: 'Réunion',
+    zipcode: '97430',
+  },
+]
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+function App() {
+  return (
+    <div>
+      <h1>Liste des employés</h1>
+      <MyDataTable data={employees} />
+    </div>
+  )
+}
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+export default App
+```
 
-## Deployment
+## Page npm du package
 
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+```bash
+https://www.npmjs.com/package/my-datatable-sydyjo
+```
