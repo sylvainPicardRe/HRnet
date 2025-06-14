@@ -1,6 +1,11 @@
-import { createStore } from 'redux'
+// src/store/store.js
+import { configureStore } from '@reduxjs/toolkit'
 import employeeReducer from '../reducers/employeeReducer'
 
-const store = createStore(employeeReducer)
+const store = configureStore({
+  reducer: {
+    employees: employeeReducer,
+  },
+})
 
 export default store

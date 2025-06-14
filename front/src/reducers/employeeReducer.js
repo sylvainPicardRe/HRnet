@@ -4,6 +4,7 @@ const initialState = {
 }
 
 function employeeReducer(state = initialState, action) {
+  console.log('Reducer state:', state)
   switch (action.type) {
     case 'ADD_EMPLOYEE':
       return {

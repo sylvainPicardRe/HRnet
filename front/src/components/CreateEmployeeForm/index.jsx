@@ -44,7 +44,6 @@ function CreateEmployeeForm({ setModalOpen, addEmployee }) {
 
   return (
     <form onSubmit={handleSubmit} id="create-employee">
-      {/* Tous tes inputs ici */}
       <label htmlFor="firstName">First Name</label>
       <input
         type="text"
@@ -104,6 +103,7 @@ function CreateEmployeeForm({ setModalOpen, addEmployee }) {
 
         <label htmlFor="state">State</label>
         <USStateSelect
+          id="state"
           className="state-select"
           value={form.state}
           onChange={handleStateChange}

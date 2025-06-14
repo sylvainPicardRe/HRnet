@@ -31,8 +31,8 @@ npm install react@18 react-dom@18
 ## Exemple d'utilisation
 
 ```jsx
-import React from 'react'
 import MyDataTable from 'my-datatable-sydyjo'
+import 'my-datatable-sydyjo/dist/my-datatable-sydyjo.css'
 
 const employees = [
   {
@@ -44,7 +44,7 @@ const employees = [
     street: '123 Rue Principale',
     city: 'Saint-Denis',
     state: 'Réunion',
-    zipcode: '97400',
+    zipCode: '97400',
   },
   {
     firstName: 'Marie',
@@ -55,7 +55,7 @@ const employees = [
     street: '456 Avenue des Sciences',
     city: 'Le Tampon',
     state: 'Réunion',
-    zipcode: '97430',
+    zipCode: '97430',
   },
 ]
 

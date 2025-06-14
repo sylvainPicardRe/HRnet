@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux'
 import DataTable from '../../components/DataTable'
 
 function EmployeeList() {
-  const employees = useSelector((state) => state.employees)
-
+  const data = useSelector((state) => state.employees)
+  const employees = data.employees
   return (
-    <main className="container">
+    <main className="container datatable">
       <Link to="/">Home</Link>
       <DataTable data={employees} />
     </main>
