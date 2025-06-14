@@ -5,11 +5,11 @@ import DataTable from '../../components/DataTable'
 
 function EmployeeList() {
   const data = useSelector((state) => state.employees)
-  const employees = data.employees
+
   return (
     <main className="container datatable">
       <Link to="/">Home</Link>
-      <DataTable data={employees} />
+      <DataTable data={data} />
     </main>
   )
 }
