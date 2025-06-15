@@ -1,6 +1,6 @@
 {
   "name": "my-datatable-sydyjo",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "A React table to manage and display employees",
   "keywords": [
     "table",
@@ -18,8 +18,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "prop-types": "^15.8.1",
-    "solid-js": "^1.9.5"
+    "prop-types": "^15.8.1"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -27,7 +26,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.5.2",
-    "vite": "^6.3.5",
-    "vite-plugin-solid": "^2.11.6"
+    "vite": "^6.3.5"
   }
 }

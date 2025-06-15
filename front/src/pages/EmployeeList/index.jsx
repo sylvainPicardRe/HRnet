@@ -1,7 +1,8 @@
 import { Link } from 'react-router'
 import { useSelector } from 'react-redux'
 
-import DataTable from '../../components/DataTable'
+import DataTable from 'my-datatable-sydyjo'
+import 'my-datatable-sydyjo/dist/my-datatable-sydyjo.css'
 
 function EmployeeList() {
   const data = useSelector((state) => state.employees)

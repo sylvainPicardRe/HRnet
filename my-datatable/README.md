@@ -14,7 +14,7 @@ A React table to manage and display employees.
 
 ## Installation
 
-Installez le package via npm ou yarn :
+Installez le package via npm :
 
 ```bash
 npm install my-datatable-sydyjo
